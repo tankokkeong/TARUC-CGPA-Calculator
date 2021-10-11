@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body-content{
+    padding: 20px;
+}
+
+.grade-table{
+    overflow: auto;
+    overflow-x: scroll;
+}
+
+.grade-table::-webkit-scrollbar {
+    display: none;
+}
+
+.formula-header{
+    padding-top: 20px;
+}
+
+.formula-display{
+    margin-top: 30px;
+}
+
+.formula-container-row{
+    margin-top: 30px;
+}
+
+.copyright-link{
+    text-decoration: none!important;
+}
+
+/* CSS for fraction */
+span.frac {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+span.frac > sup, span.frac > sub {
+    display: block;
+    font: inherit;
+    padding: 0 0.3em;
+}
+
+.denominator{
+    position: relative;
+    bottom: 5px;
+}
+
+.frac{
+    position: relative;
+    top: 7px;
+    padding: 0 10px;
+}
+
+span.frac > sup {border-bottom: 0.08em solid;}
+span.frac > span {display: NONE;}
+
+@media (min-width: 850px) {
+    .body-content{
+        padding: 30px 10% 10% 10%;
+    }
+    
+}
