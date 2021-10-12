@@ -39,6 +39,8 @@ function addSubject(){
                 '<option value="2.75">B-</option>'+
                 '<option value="2.50">C+</option>'+
                 '<option value="2.00">C</option>'+
+                '<option value="1.75">C-</option>' +
+                '<option value="1.00">D</option>' +
                 '<option value="0.00">F</option>'+
             '</select>'+
         '</td>'+
