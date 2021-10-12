@@ -44,7 +44,7 @@ function addSubject(){
         '</td>'+
 
         '<td>'+
-            '<button class="btn btn-danger" onclick="removeSubject(' + "'" + 'subject-row-' + subject_count + "'" + ')">Remove Subject</button>' +
+            '<button class="btn btn-danger" onclick="removeSubject(' + "'" + 'subject-row-' + subject_count + "'" + ')"><i class="fas fa-trash"></i> Remove Subject</button>' +
         '</td>';
 
     table_body.appendChild(new_subject);
@@ -79,7 +79,15 @@ function calculateGPA(){
             total_credit_hours = total_credit_hours + parseInt(credit_hours[i].value);
         }
 
-        gpa_results.innerHTML = "Results: " + parseFloat(quality_point / total_credit_hours).toFixed(4) + " GPA";
+        var results = parseFloat(quality_point / total_credit_hours).toFixed(4)
+
+        if(results >= 2){
+            gpa_results.innerHTML = "<span class='text-success'>Results: " + results + " GPA</span>";
+        }
+        else{
+            gpa_results.innerHTML = "<span class='text-danger'>Results: " + results + " GPA</span>";
+        }
+
     }
 }
 
@@ -109,14 +117,10 @@ function addSemester(){
         '</td>' +
 
         '<td>'+
-            '<button class="btn btn-danger" onclick="removeSemester(' + "'" + 'semester-row-' + semester_row_count + "'" + ')">Remove Subject</button>' +
+            '<button class="btn btn-danger" onclick="removeSemester(' + "'" + 'semester-row-' + semester_row_count + "'" + ')"><i class="fas fa-trash"></i> Remove Subject</button>' +
         '</td>';
 
     table_body.appendChild(new_semester);
-}
-
-function addIndustrialTraining(){
-    
 }
 
 function removeSemester(row_id){
@@ -151,7 +155,15 @@ function calculateCGPA(){
             grand_total_credit_hours = grand_total_credit_hours + parseInt(total_credit_hours[i].value);
         }
 
-        cgpa_results.innerHTML = "Results: " + parseFloat(cgpa / grand_total_credit_hours).toFixed(4) + " CGPA";
+        var results = parseFloat(cgpa / grand_total_credit_hours).toFixed(4);
+
+        if(results >= 2){
+            cgpa_results.innerHTML = "<span class='text-success'>Results: " + results + " CGPA</span>";
+        }
+        else{
+            cgpa_results.innerHTML = "<span class='text-danger'>Results: " + results + " CGPA</span>";
+        }
+       
     }
 }
 

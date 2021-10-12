@@ -8,12 +8,12 @@
 }
 
 .grade-table{
-    overflow: auto;
     overflow-x: scroll;
+    padding: 10px;
 }
 
-.grade-table::-webkit-scrollbar {
-    display: none;
+.grade-table td{
+    min-width: 200px;
 }
 
 .formula-header{
@@ -30,6 +30,16 @@
 
 .copyright-link{
     text-decoration: none!important;
+}
+
+.grade-table::-webkit-scrollbar {
+    height: 5px;
+    border: 1px solid #d5d5d5;
+    width: 10px;
+}
+
+.grade-table::-webkit-scrollbar-thumb {
+    background: #888;
 }
 
 /* CSS for fraction */
@@ -63,5 +73,10 @@ span.frac > span {display: NONE;}
     .body-content{
         padding: 30px 10% 10% 10%;
     }
-    
+}
+
+@media (min-width: 1200px){
+    .grade-table::-webkit-scrollbar {
+        display: none;
+    }
 }
